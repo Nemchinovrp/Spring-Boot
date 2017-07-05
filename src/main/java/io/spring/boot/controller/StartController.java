@@ -1,4 +1,4 @@
-package io.spring.boot;
+package io.spring.boot.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,15 +6,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class StartController {
 
-    @RequestMapping("/start")
+    @RequestMapping("/")
     public String startPage(){
-        System.out.println("start");
         return "login";
     }
 
     @RequestMapping("/hello")
     public String helloPage(){
-        System.out.println("Hello");
         return "hello";
+    }
+
+    @RequestMapping("/registration")
+    public String registrationPage(){
+        return "registration";
     }
 }
